@@ -2,10 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learn_getx/locale/locale_controller.dart';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    MyLocaleController controller = Get.find();
     return Scaffold(
       appBar: AppBar(title: Text("1".tr)),
       body: Column(
@@ -15,9 +17,11 @@ class Home extends StatelessWidget {
           ),
           Center(
             child: MaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                controller.changeLang("en");
+              },
               color: Colors.green,
-              child:  Text("2".tr),
+              child: Text("2".tr),
             ),
           ),
           const SizedBox(
@@ -25,9 +29,11 @@ class Home extends StatelessWidget {
           ),
           Center(
             child: MaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                controller.changeLang("ar");
+              },
               color: Colors.green,
-              child:  Text("3".tr),
+              child: Text("3".tr),
             ),
           ),
         ],
