@@ -2,23 +2,35 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:learn_getx/main.dart';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Home Screen")),
-      body: Center(
-        child: MaterialButton(
-          // in home Scereen
-          onPressed: () {
-            sharepref!.clear();
-            Get.offAllNamed("/");
-          },
-          color: Colors.deepPurple,
-          child: const Text("Sign out"),
-        ),
+      appBar: AppBar(title: Text("1".tr)),
+      body: Column(
+        children: [
+          const SizedBox(
+            height: 200,
+          ),
+          Center(
+            child: MaterialButton(
+              onPressed: () {},
+              color: Colors.green,
+              child:  Text("2".tr),
+            ),
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+          Center(
+            child: MaterialButton(
+              onPressed: () {},
+              color: Colors.green,
+              child:  Text("3".tr),
+            ),
+          ),
+        ],
       ),
     );
   }
